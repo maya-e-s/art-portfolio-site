@@ -6,7 +6,6 @@
 * {  box-sizing: border-box;}
 
 /*CSS For Image Slideshow*/
-.slidesOrangeVase, .slidesSmallBlueCup, .slidesOrangeBottomCup, .slidesLeaves, .slidesLeaf, .slidesBlueShotglass {display: none} /*must update in Javascript functions*/
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -128,166 +127,58 @@ h1 {
 
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('glass vessel')"> Glass - Vessels</button>
-  <button class="btn" onclick="filterSelection('flameworked glass')"> Flameworked Glass</button>
+  <button class="btn" onclick="filterSelection('glass-vessel')"> Glass - Vessels</button>
+  <button class="btn" onclick="filterSelection('flameworked-glass')"> Flameworked Glass</button>
   <button class="btn" onclick="filterSelection('ceramic')"> Ceramic</button>
+</div>  
+
+<div class="row">
+<div class="column glass-vessel">
+  <div class="content slideshow-container" id="layered-orange-vase">
+      <h4>Layered Orange Vase</h4>
+    <p>Hand blown vase layered with orange frit. </p>
+  </div>
+</div>
+<div class="column glass-vessel">
+  <div class="content slideshow-container" id="small-blue-cup">
+    <h4>Small Blue Cup</h4>
+    <p>Hand blown small blue cup.</p>
+  </div>
+</div>
+<div class="column glass-vessel">
+  <div class="content slideshow-container" id="orange-bottom-cup">
+    <h4>Orange Bottomed Cup</h4>
+    <p>Hand blown cup with an orange frit pattern on the base. </p>
+  </div>
+</div>
+<div class="column glass-vessel">
+  <div class="content slideshow-container" id="blue-shotglass">
+    <h4>Blue Shotglass</h4>
+    <p>Hand blown blue shotglass. </p>
+  </div>
 </div>
 
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column glass vessel">
-    <div class="content slideshow-container">
-        <div class="slidesOrangeVase">
-            <img src="images/layered orange vase (1).jpg" alt="Layered orange vase" style="width:100%">
-        </div>
-        <div class="slidesOrangeVase">
-            <img src="images/layered orange vase (2).jpg" alt="Layered orange vase" style="width:100%">
-        </div>
-        <div class="slidesOrangeVase">
-            <img src="images/layered orange vase (3).jpg" alt="Layered orange vase" style="width:100%">
-        </div>
-        <div class="slidesOrangeVase">
-            <img src="images/layered orange vase (4).jpg" alt="Layered orange vase" style="width:100%">
-        </div>
-        <div class="slidesOrangeVase">
-            <img src="images/layered orange vase (5).jpg" alt="Layered orange vase" style="width:100%">
-        </div>
-        <div class="slidesOrangeVase">
-            <img src="images/layered orange vase (6).jpg" alt="Layered orange vase" style="width:100%">
-        </div>
-        <div class="slidesOrangeVase">
-            <img src="images/layered orange vase (7).jpg" alt="Layered orange vase" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-        <h4>Layered Orange Vase</h4>
-      <p>Hand blown vase layerd with orange frit. </p>
-    </div>
+<div class="column flameworked-glass">
+  <div class="content slideshow-container" id="leaves">
+    <h4>Leaves</h4>
+    <p>Two flameworked leaves. </p>
   </div>
-  <div class="column glass vessel">
-    <div class="content slideshow-container">
-        <div class="slidesSmallBlueCup">
-            <img src="images/small blue cup (3).jpg" alt="Small blue cup" style="width:100%">
-        </div>
-        <div class="slidesSmallBlueCup">
-            <img src="images/small blue cup (2).jpg" alt="Small blue cup" style="width:100%">
-        </div>
-        <div class="slidesSmallBlueCup">
-            <img src="images/small blue cup (1).jpg" alt="Small blue cup" style="width:100%">
-        </div>
-        <div class="slidesSmallBlueCup">
-            <img src="images/small blue cup (4).jpg" alt="Small blue cup" style="width:100%">
-        </div>
-        <div class="slidesSmallBlueCup">
-            <img src="images/small blue cup (5).jpg" alt="Small blue cup" style="width:100%">
-        </div>
-        <div class="slidesSmallBlueCup">
-            <img src="images/small blue cup (6).jpg" alt="Small blue cup" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-      <h4>Small Blue Cup</h4>
-      <p>Hand blown small blue cup.</p>
-    </div>
+</div>
+<div class="column flameworked-glass">
+  <div class="content slideshow-container" id="leaf">
+    <h4>Leaf</h4>
+    <p>Flameworked leaf on a rod. </p>
   </div>
-  <div class="column glass vessel">
-    <div class="content slideshow-container">
-        <div class="slidesOrangeBottomCup">
-            <img src="images/orange bottom cup (5).jpg" alt="Orange Bottomed Cup" style="width:100%">
-        </div>
-        <div class="slidesOrangeBottomCup">
-            <img src="images/orange bottom cup (2).jpg" alt="Orange Bottomed Cup" style="width:100%">
-        </div>
-        <div class="slidesOrangeBottomCup">
-            <img src="images/orange bottom cup (3).jpg" alt="Orange Bottomed Cup" style="width:100%">
-        </div>
-        <div class="slidesOrangeBottomCup">
-            <img src="images/orange bottom cup (4).jpg" alt="Orange Bottomed Cup" style="width:100%">
-        </div>
-        <div class="slidesOrangeBottomCup">
-            <img src="images/orange bottom cup (1).jpg" alt="Orange Bottomed Cup" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
-      <h4>Orange Bottomed Cup</h4>
-      <p>Hand blown cup with an orange frit pattern on the base. </p>
-    </div>
-  </div>
-  <div class="column glass vessel">
-    <div class="content slideshow-container">
-        <div class="slidesBlueShotglass">
-            <img src="images/blue shotglass (1).jpg" alt="Blue Shotglass" style="width:100%">
-        </div>
-        <div class="slidesBlueShotglass">
-            <img src="images/blue shotglass (2).jpg" alt="Blue Shotglass" style="width:100%">
-        </div>
-        <div class="slidesBlueShotglass">
-            <img src="images/blue shotglass (3).jpg" alt="Blue Shotglass" style="width:100%">
-        </div>
-        <div class="slidesBlueShotglass">
-            <img src="images/blue shotglass (4).jpg" alt="Blue Shotglass" style="width:100%">
-        </div>
-        <div class="slidesBlueShotglass">
-            <img src="images/blue shotglass (5).jpg" alt="Blue Shotglass" style="width:100%">
-        </div>
-        <div class="slidesBlueShotglass">
-            <img src="images/blue shotglass (6).jpg" alt="Blue Shotglass" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1, 3)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 3)">&#10095;</a>
-      <h4>Blue Shotglass</h4>
-      <p>Hand blown blue shotglass. </p>
-    </div>
-  </div>
-  
-  <div class="column flameworked glass">
-    <div class="content slideshow-container">
-        <div class="slidesLeaves">
-            <img src="images/leaves (2).jpg" alt="Flameworked leaves" style="width:100%">
-        </div>
-        <div class="slidesLeaves">
-            <img src="images/leaves (1).jpg" alt="Flameworked leaves" style="width:100%">
-        </div>
-        <div class="slidesLeaves">
-            <img src="images/leaf 2 (1).jpg" alt="Flameworked leaves" style="width:100%">
-        </div>
-        <div class="slidesLeaves">
-            <img src="images/leaf 2 (2).jpg" alt="Flameworked leaves" style="width:100%">
-        </div>
-        <div class="slidesLeaves">
-            <img src="images/leaf 2 (3).jpg" alt="Flameworked leaves" style="width:100%">
-        </div>
-        <div class="slidesLeaves">
-            <img src="images/leaf 2 (4).jpg" alt="Flameworked leaves" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1, 4)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 4)">&#10095;</a>
-      <h4>Flameworked Leaves</h4>
-      <p>Two flameworked leaves. </p>
-    </div>
-  </div>
-  <div class="column flameworked glass">
-    <div class="content slideshow-container">
-        <div class="slidesLeaf"> 
-            <img src="images/leaf 1 (2).jpg" alt="Flameworked Leaf" style="width:100%">
-        </div>
-        <div class="slidesLeaf"> 
-            <img src="images/leaf 1 (1).jpg" alt="Flameworked Leaf" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1, 5)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 5)">&#10095;</a>
-      <h4>Flameworked Leaf</h4>
-      <p>Flameworked leaf on a rod. </p>
-    </div>
-  </div>
+</div>
 
-<!-- END GRID -->
+<!-- END GRID (class = row) -->
 </div>
 
 <!-- END MAIN --> 
 </div>
 
-<!-- Image Gallery -->
+<!-- Javascript ----------------------------------------------------------------------------------------- -->
+<!-- Image Gallery (Filters) -->
 <script>
 filterSelection("all")
 function filterSelection(c) {
@@ -299,7 +190,6 @@ function filterSelection(c) {
     if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
   }
 }
-
 function w3AddClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -308,7 +198,6 @@ function w3AddClass(element, name) {
     if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
   }
 }
-
 function w3RemoveClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -320,8 +209,6 @@ function w3RemoveClass(element, name) {
   }
   element.className = arr1.join(" ");
 }
-
-
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
@@ -334,33 +221,53 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script>
 
-<!-- Image Slideshow-->
+<!-- Populate with Images -->
 <script>
-    let slideIndex = [1,1,1,1,1,1];
-    let slideId = ["slidesOrangeVase", "slidesSmallBlueCup", "slidesOrangeBottomCup", "slidesBlueShotglass", "slidesLeaves", "slidesLeaf"];
-    showSlides(1, 0);
-    showSlides(1, 1);
-    showSlides(1, 2);
-    showSlides(1, 3);
-    showSlides(1, 4);
-    showSlides(1, 5);
-    
-    function plusSlides(n, no) {
-      showSlides(slideIndex[no] += n, no);
-    }
-    
-    function showSlides(n, no) {
-      let i;
-      let x = document.getElementsByClassName(slideId[no]);
-      if (n > x.length) {slideIndex[no] = 1}    
-      if (n < 1) {slideIndex[no] = x.length}
-      for (i = 0; i < x.length; i++) {
-         x[i].style.display = "none";  
+  let imageNames = {"layered-orange-vase":7, "blue-shotglass":6, "orange-bottom-cup":5, "small-blue-cup":7, "leaf":2, "leaves":6};  // imageID: number of photos 
+  for (var id in imageNames){  //for each art peice (imageID)
+    var ele = document.getElementById(id);
+    var pageName = id;
+    var className = 'slides-' + id;
+    for (var i = 0; i < imageNames[id]; i++){ //add all images from image folder 
+          let img = document.createElement('img');
+          img.setAttribute("class", className);
+          img.src =  "images/" + pageName + " (" + (i+1) + ").jpg";
+          img.alt = id.replaceAll('-', ' ');
+          img.style = 'width:100%';
+          ele.appendChild(img);
       }
-      x[slideIndex[no]-1].style.display = "block";  
+    //add prev and next buttons 
+    let prev = '<a class="prev" onclick="plusSlides(-1, \'' + className + '\')">&#10094;</a>';
+    ele.innerHTML += prev;
+    let next = '<a class="next" onclick="plusSlides(1, \'' + className + '\')">&#10095;</a>';
+    ele.innerHTML += next;
+    //console.log(ele.innerHTML)
+  }
+</script>
+
+<!-- Image Slideshow -->
+<script>
+  //slides = {imageID:slideNumber}
+  let slides = {"slides-layered-orange-vase":1, "slides-blue-shotglass":1, "slides-orange-bottom-cup":1, "slides-small-blue-cup":1, "slides-leaf":1, "slides-leaves":1};
+  for (var imageID in slides) {
+    showSlides(1, imageID);
+  }  
+  function plusSlides(n, imageID) {
+    showSlides(slides[imageID] += n, imageID)
+  }
+  function showSlides(n, imageID) {
+    let i;
+    let x = document.getElementsByClassName(imageID);
+    //console.log('x.length = ' + x.length);
+    //console.log("imageID = " + imageID)
+    if (n > x.length) {slides[imageID] = 1} //slide out of range, show 1st image 
+    if (n < 1) {slides[imageID] = x.length} //set to last slide 
+    for (i = 0; i < x.length; i++) { //for each element of class imageID (each slide)
+       x[i].style.display = "none"; //hide 
     }
-    </script>
-    
+    x[slides[imageID]-1].style.display = "block"; //display desired 
+  }
+  </script>
 
 </body>
 </html>
