@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="gallery-style.css">
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>Maya Stevenson</h1>
+<hr>
+
+<h2>Portfolio: Hot Shop Glass</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('vessel')"> Vessels</button>
+  <button class="btn" onclick="filterSelection('sculpture')"> Sculpture</button>
+  <button class="btn" onclick="location.href='index.html'"> Home</button>
+</div>  
+
+<!-- Start Grid (row) -->
+<div class="row" id="fill">
+  
+<!-- END GRID (row) -->
+</div>
+
+<!-- END MAIN --> 
+</div>
+
+<!-- Javascript ----------------------------------------------------------------------------------------- -->
+<!-- Populate with Images and Image SLideshow -->
+<script>
+  /* Class Constructor for each Image Slideshow*/
+  class imageSlides {
+      constructor(title, descr, num, id, path) {
+          this.title = title; //title of art peice 
+          this.descr = descr; //description of art peice
+          this.num = num; //number of slides
+          this.id = id; //id of art peice (image file name)
+          this.path = path; //path of images
+      }
+      /* return text to add to innerhtml */
+      createHTML() {
+          //add image container (id) with header and description 
+          var htmlText = '<div class="content slideshow-container" id="' + this.id + '"> <h4>' + this.title + '</h4><p>' + this.descr + '</p>';
+          //add each image slide, display 1st 
+          htmlText += '<img class="slides-' + this.id +'" src="' + this.path + ' (1).jpg" style="width:100%; display:block;">';
+          for (let i=2; i<=this.num; i++) {
+              htmlText += '<img class="slides-' + this.id +'" src="' + this.path + ' ('+i+').jpg" style="width:100%; display:none;">';
+          }
+          //add prev and next buttons, end html
+          let prev = '<a class="prev" onclick="plusSlides(-1, \'slides-' + this.id + '\')">&#10094;</a>';
+          let next = '<a class="next" onclick="plusSlides(1, \'slides-' + this.id + '\')">&#10095;</a> </div>';
+          htmlText += (prev + next);
+          return htmlText; 
+      }
+  }
+
+  /* Add images for each filter */ 
+  var htmlText = ''; 
+  var slides = {'slides-':1}; //store current slide index 
+
+  /* Add new images for each filter */ 
+  //vessel
+  const vessels = [new imageSlides('Layered Orange Vase', 'Hand blown vase layered with orange frit.', 7, 'layered-orange-vase', 'images/layered-orange-vase'), 
+    new imageSlides('Blue Shotglass', 'Hand blown blue shotglass.', 6, 'blue-shotglass', 'images/blue-shotglass'), 
+    new imageSlides('Orange Bottom Cup', 'Hand blown cup with an orange frit pattern on the base.', 5, 'orange-bottom-cup', 'images/orange-bottom-cup'),
+    new imageSlides('Small Blue Cup', 'Hand blown small blue cup.', 7, 'small-blue-cup', 'images/small-blue-cup')
+  ];
+  for (const ves of vessels) {
+      htmlText +=  '<div class="column vessel">' + ves.createHTML() + '</div>';
+      slides[('slides-'+ves.id)] = 1;
+  }
+
+  document.getElementById('fill').innerHTML += htmlText;
+  //console.log(document.getElementById('fill').innerHTML)
+
+  /* Slideshow functions */
+  function plusSlides(n, imageID) {
+    showSlides(slides[imageID] += n, imageID)
+  }
+
+  function showSlides(n, imageID) {
+    let i;
+    let x = document.getElementsByClassName(imageID);
+    if (n > x.length) {slides[imageID] = 1} //slide out of range, show 1st image 
+    if (n < 1) {slides[imageID] = x.length} //set to last slide 
+    for (i = 0; i < x.length; i++) { //for each element of class imageID (each slide)
+       x[i].style.display = "none"; //hide 
+    }
+    x[slides[imageID]-1].style.display = "block"; //display desired 
+  }
+  </script>
+
+<!-- Image Gallery (Filters) -->
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
