@@ -188,6 +188,7 @@ h1 {
   ];
   for (const ves of vessels) {
       htmlText +=  '<div class="column glass-vessel">' + ves.createHTML() + '</div>';
+      slides[('slides-' + ves.id)] = 1;
   }
 
   //flameworked-glass
@@ -196,6 +197,7 @@ h1 {
   ];
   for (const flame of flameworkedGlass) {
       htmlText +=  '<div class="column flameworked-glass">' + flame.createHTML() + '</div>';
+      slides[('slides-' + flame.id)] = 1;
   }
 
   //flameworked-necklace
@@ -228,6 +230,7 @@ h1 {
   ];
   for (const n of necklaces) {
       htmlText +=  '<div class="column flameworked-necklace">' + n.createHTML() + '</div>';
+      slides[('slides-' + n.id)] = 1;
   }
 
   document.getElementById('fill').innerHTML += htmlText;
