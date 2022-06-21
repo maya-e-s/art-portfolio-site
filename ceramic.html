@@ -12,12 +12,11 @@
 <h1>Maya Stevenson</h1>
 <hr>
 
-<h2>Portfolio: Hot Shop Glass</h2>
+<h2>Portfolio: Ceramic </h2>
 
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('vessel')"> Vessels</button>
-  <button class="btn" onclick="filterSelection('sculpture')"> Sculpture</button>
+  <button class="btn" onclick="filterSelection('plates')"> Plates</button>
   <button class="btn" onclick="location.href='index.html'"> Home</button>
 </div>  
 
@@ -40,16 +39,16 @@
           this.descr = descr; //description of art peice
           this.num = num; //number of slides
           this.id = id; //id of art peice (image file name)
-          this.path = path; //path of images following "images/glass/""
+          this.path = path; //path of images following "images/ceramic/"
       }
       /* return text to add to innerhtml */
       createHTML() {
           //add image container (id) with header and description 
           var htmlText = '<div class="content slideshow-container" id="' + this.id + '"> <h4>' + this.title + '</h4><p>' + this.descr + '</p>';
           //add each image slide, display 1st 
-          htmlText += '<img class="slides-' + this.id +'" src="images/glass/' + this.path + ' (1).jpg" style="width:100%; display:block;">';
+          htmlText += '<img class="slides-' + this.id +'" src="images/ceramic/' + this.path + ' (1).jpg" style="width:100%; display:block;">';
           for (let i=2; i<=this.num; i++) {
-              htmlText += '<img class="slides-' + this.id +'" src="images/glass/' + this.path + ' ('+i+').jpg" style="width:100%; display:none;">';
+              htmlText += '<img class="slides-' + this.id +'" src="images/ceramic/' + this.path + ' ('+i+').jpg" style="width:100%; display:none;">';
           }
           //add prev and next buttons, end html
           let prev = '<a class="prev" onclick="plusSlides(-1, \'slides-' + this.id + '\')">&#10094;</a>';
@@ -64,34 +63,16 @@
   var slides = {'slides-':1}; //store current slide index 
 
   /* Add new images for each filter */ 
-  //vessel
-  const vessels = [new imageSlides('Layered Orange Vase', 'Hand blown vase layered with orange frit.', 7, 'layered-orange-vase', 'layered-orange-vase'), 
-    new imageSlides('Blue Shotglass', 'Hand blown blue shotglass.', 6, 'blue-shotglass', 'blue-shotglass'), 
-    new imageSlides('Orange Bottom Cup', 'Hand blown cup with an orange frit pattern on the base.', 5, 'orange-bottom-cup', 'orange-bottom-cup'),
-    new imageSlides('Small Blue Cup', 'Hand blown small blue cup.', 7, 'small-blue-cup', 'small-blue-cup')
+  //plates
+  const plates = [new imageSlides('Amber Spiral Plate', 'Thrown plate with spiral design. Reduction fired, satin green under amber.', 9, 'amber-spiral', 'plates/amber-spiral'), 
+    new imageSlides('Blue Flower Plate', 'Thrown plate dipped in blue underglaze with carved flower design. Oxidation.', 5, 'blue-flowers', 'plates/blue-flowers'), 
+    new imageSlides('Blue Leaves Plate', 'Thrown plate dipped in blue underglaze with carved leaf design. Oxidation.', 4, 'blue-leaves', 'plates/blue-leaves'), 
+    new imageSlides('Green Plate (1)', 'Thrown plate. Oxidation fired, satin green under celadon.', 8, 'green-1', 'plates/green-1'),
+    new imageSlides('Green Plate (2)', 'Thrown plate. Oxidation fired, clear under satin green.', 7, 'green-2', 'plates/green-2'),
   ];
-  for (const ves of vessels) {
-      htmlText +=  '<div class="column vessel">' + ves.createHTML() + '</div>';
-      slides[('slides-'+ves.id)] = 1;
-  }
-
-  //sculpture
-  const scuplture = [new imageSlides('Blue Rectangle', 'Solid rectanlge with blue coloring and stretched bubble.', 6, 'blue-rectangle', 'sculpture/blue-rectangle'), 
-    new imageSlides('Ladybug', 'Solid glass ladybug. Notice the two gathers of red frit seen through the bottom.', 12, 'ladybug', 'sculpture/ladybug'), 
-    new imageSlides('Orange Snail', 'Solid orange snail.', 12, 'orange-snail', 'sculpture/orange-snail'), 
-    new imageSlides('Snail', 'Solid clear snail.', 6, 'snail', 'sculpture/snail'), 
-    new imageSlides('Swan (1)', 'Solid swan. Bottom cracked so not cold worked.', 6, 'swan-1', 'sculpture/swan-1'), 
-    new imageSlides('Swan (2)', 'Solid swan.', 9, 'swan-2', 'sculpture/swan-2'),   
-    new imageSlides('Copper Spiral', 'Spiraled copper wire encased in glass with heat patina.', 4, 'copper-spiral', 'sculpture/copper-spiral'), 
-    new imageSlides('Copper Wire', 'Copper wire partially encased in glass. Can carry electricity (be used in a circuit).', 5, 'copper-wire', 'sculpture/copper-wire'), 
-    new imageSlides('Crackled Ball', 'Small glass ball with crackled exterior.', 7, 'crackled-ball', 'sculpture/crackled-ball'), 
-    new imageSlides('Crackled Snowman', 'Small glass snowman with crackled exterior.', 4, 'crackled-snowman', 'sculpture/crackled-snowman'), 
-    new imageSlides('Green Snowman', 'Small glass green snowman with face.', 5, 'green-snowman', 'sculpture/green-snowman'), 
-    new imageSlides('Yellow and White Spiral)', 'Thick hollow yellow and white spiral.', 6, 'yellow-spiral', 'sculpture/yellow-spiral'),  
-  ];
-  for (const sculp of scuplture) {
-      htmlText +=  '<div class="column sculpture">' + sculp.createHTML() + '</div>';
-      slides[('slides-'+sculp.id)] = 1;
+  for (const plate of plates) {
+      htmlText +=  '<div class="column plates">' + plate.createHTML() + '</div>';
+      slides[('slides-'+ plate.id)] = 1;
   }
 
   document.getElementById('fill').innerHTML += htmlText;
