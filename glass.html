@@ -17,6 +17,7 @@
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
   <button class="btn" onclick="filterSelection('vessel')"> Vessels</button>
+  <button class="btn" onclick="filterSelection('paperweights')"> Paperweights</button>
   <button class="btn" onclick="filterSelection('sculpture')"> Sculpture</button>
   <button class="btn" onclick="location.href='index.html'"> Home</button>
 </div>  
@@ -65,20 +66,59 @@
 
   /* Add new images for each filter */ 
   //vessel
-  const vessels = [new imageSlides('Layered Orange Vase', 'Hand blown vase layered with orange frit.', 7, 'layered-orange-vase', 'layered-orange-vase'), 
-    new imageSlides('Blue Shotglass', 'Hand blown blue shotglass.', 6, 'blue-shotglass', 'blue-shotglass'), 
-    new imageSlides('Orange Bottom Cup', 'Hand blown cup with an orange frit pattern on the base.', 5, 'orange-bottom-cup', 'orange-bottom-cup'),
-    new imageSlides('Small Blue Cup', 'Hand blown small blue cup.', 7, 'small-blue-cup', 'small-blue-cup')
+  const vessels = [
+    new imageSlides('Orange Vase', 'Hand blown vase layered with orange frit.', 6, 'orange-tall', 'vessels/orange-tall'),
+    new imageSlides('Blue Shotglass', 'Hand blown blue shotglass.', 6, 'blue-shotglass', 'vessels/blue-shotglass'),
+    new imageSlides('Small Blue Cup', 'Hand blown small blue cup.', 6, 'blue-small', 'vessels/blue-small'),
+    new imageSlides('Brown and White Vase', 'Hand blown brown and white vase.', 6, 'brown', 'vessels/brown'),
+    new imageSlides('Orange Bottom Cup with Hole', 'Hand blown cup with orange frit pattern and hole in bottom.', 7, 'orange-bottom', 'vessels/orange-bottom'),
+    new imageSlides('Black', 'Hand blown black vase.', 3, 'black', 'vessels/black'),
+    new imageSlides('Blue Vase (1)', 'Hand blown blue vase with pulled and textured neck.', 4, 'blue-fancy', 'vessels/blue-fancy'),
+    new imageSlides('Blue Vase (2)', 'Hand blown blue vase with white frit.', 6, 'blue-pretzel', 'vessels/blue-pretzel'),
+    new imageSlides('Bubble on Wood', 'Hand blown clear bubble on wood.', 6, 'bubble-1', 'vessels/bubble-1'),
+    new imageSlides('Textured Bubble', 'Hand blown thick clear bubble with textured bottom.', 2, 'bubble-2', 'vessels/bubble-2'),
+    new imageSlides('Bubble on Rock (1)', 'Hand blown clear bubble on rock.', 5, 'bubble-3', 'vessels/bubble-3'),
+    new imageSlides('Bubble on Rock (2)', 'Hand blown clear bubble on rock.', 5, 'bubble-4', 'vessels/bubble-4'),
+    new imageSlides('Bubble on Rock (3)', 'Hand blown clear bubble on rock.', 5, 'bubble-5', 'vessels/bubble-5'),
+    new imageSlides('Crackled Green Cup with Hole', 'Hand blown and crackled green and white cup. Hole in bottom.', 5, 'crackled-green', 'vessels/crackled-green'),
+    new imageSlides('Light Green Vase', 'Hand blown vase.', 4, 'glow-color', 'vessels/glow-color'),
+    new imageSlides('Green Orb', 'Hand blown hollow green orb.', 5, 'green-ball', 'vessels/green-ball'),
+    new imageSlides('Cup with Green Swirl', 'Hand blown cup with green swirl.', 5, 'green-swirl', 'vessels/green-swirl'),
+    new imageSlides('Orange Cup', 'Hand blown cup with thick walls and orange base.', 5, 'orange-thick', 'vessels/orange-thick')
   ];
   for (const ves of vessels) {
       htmlText +=  '<div class="column vessel">' + ves.createHTML() + '</div>';
       slides[('slides-'+ves.id)] = 1;
   }
 
+  /* Add new images for each filter */ 
+  //paperweights
+  const paperweights = [
+    new imageSlides('Copper Encased Wire', 'Hand sculpted paperweight. Encased copper wire with heat patina.', 8, 'copperball', 'paperweights/copperball'),
+    new imageSlides('Black Pineapple', 'Hand sculpted paperweight, black color with pineapple mold.', 6, 'black-pineapple', 'paperweights/black-pineapple'),
+    new imageSlides('Bubble', 'Hand sculpted paperweight with bubble.', 4, 'bubble', 'paperweights/bubble'),
+    new imageSlides('Green with Bubble', 'Hand sculpted paperweight with green frit and bubble.', 6, 'bubble-green', 'paperweights/bubble-green'),
+    new imageSlides('Yellow with Bubble', 'Hand sculpted paperweight with yellow frit and bubble.', 4, 'bubble-yellow', 'paperweights/bubble-yellow'),
+    new imageSlides('Blue Green Wraps', 'Hand sculpted paperweight, green and blue wrapped bits.', 6, 'wrapped', 'paperweights/wrapped'),
+    new imageSlides('Adventurine Green Mix', 'Hand sculpted paperweight, adventurine green, blue, and white mix.', 4, 'adventurine-mix', 'paperweights/adventurine-mix'), 
+    new imageSlides('Baking Soda', 'Hand sculpted paperweight, baking soda to produce bubbles.', 3, 'baking-soda', 'paperweights/baking-soda'), 
+    new imageSlides('Black', 'Hand sculpted paperweight, black.', 4, 'black', 'paperweights/black'),
+    new imageSlides('Blue', 'Hand sculpted paperweight, blue.', 4, 'blue', 'paperweights/blue'),
+    new imageSlides('Blue with Mold', 'Hand sculpted paperweight, blue color with mold.', 4, 'blue-mold', 'paperweights/blue-mold'),
+    new imageSlides('Green Stringers', 'Hand sculpted paperweight with green and blue frit.', 5, 'green-stringers', 'paperweights/green-stringers'),
+    new imageSlides('Studio Party Mix', 'Hand sculpted paperweight, studio party mix in mold.', 5, 'party-mold', 'paperweights/party-mold'),
+    new imageSlides('Red Mold', 'Hand sculpted paperweight, red frit with mold.', 5, 'red-mold', 'paperweights/red-mold'),
+    new imageSlides('Red', 'Hand sculpted paperweight, red frit.', 5, 'strawberry', 'paperweights/strawberry')
+  ];
+  for (const paperweight of paperweights) {
+      htmlText +=  '<div class="column paperweights">' + paperweight.createHTML() + '</div>';
+      slides[('slides-'+paperweight.id)] = 1;
+  }
+
   //sculpture
   const scuplture = [new imageSlides('Blue Rectangle', 'Solid rectanlge with blue coloring and stretched bubble.', 6, 'blue-rectangle', 'sculpture/blue-rectangle'), 
     new imageSlides('Ladybug', 'Solid glass ladybug. Notice the two gathers of red frit seen through the bottom.', 12, 'ladybug', 'sculpture/ladybug'), 
-    new imageSlides('Orange Snail', 'Solid orange snail.', 12, 'orange-snail', 'sculpture/orange-snail'), 
+    new imageSlides('Orange Snail', 'Solid orange snail.', 9, 'orange-snail', 'sculpture/orange-snail'), 
     new imageSlides('Snail', 'Solid clear snail.', 6, 'snail', 'sculpture/snail'), 
     new imageSlides('Swan (1)', 'Solid swan. Bottom cracked so not cold worked.', 6, 'swan-1', 'sculpture/swan-1'), 
     new imageSlides('Swan (2)', 'Solid swan.', 9, 'swan-2', 'sculpture/swan-2'),   
@@ -87,7 +127,8 @@
     new imageSlides('Crackled Ball', 'Small glass ball with crackled exterior.', 7, 'crackled-ball', 'sculpture/crackled-ball'), 
     new imageSlides('Crackled Snowman', 'Small glass snowman with crackled exterior.', 4, 'crackled-snowman', 'sculpture/crackled-snowman'), 
     new imageSlides('Green Snowman', 'Small glass green snowman with face.', 5, 'green-snowman', 'sculpture/green-snowman'), 
-    new imageSlides('Yellow and White Spiral)', 'Thick hollow yellow and white spiral.', 6, 'yellow-spiral', 'sculpture/yellow-spiral'),  
+    new imageSlides('Planet', 'Clear sphere wrapped in glass bits.', 2, 'planet', 'sculpture/planet'), 
+    new imageSlides('Yellow and White Spiral', 'Thick hollow yellow and white spiral.', 3, 'yellow-spiral', 'sculpture/yellow-spiral')
   ];
   for (const sculp of scuplture) {
       htmlText +=  '<div class="column sculpture">' + sculp.createHTML() + '</div>';

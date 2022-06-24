@@ -65,8 +65,19 @@
 
   /* Add new images for each filter */ 
   //sculpture
-  const sculpture = [new imageSlides('Leaf', 'Flameworked leaf on a rod.', 2, 'leaf', 'leaf'),
-    new imageSlides('Leaves', 'Two flameworked leaves.', 6, 'leaves', 'leaves')
+  const sculpture = [
+    new imageSlides('Leaf (1)', 'Flameworked boro leaf.', 5, 'leaf-1', 'sculpture/leaf-1'),
+    new imageSlides('Leaf (2)', 'Flameworked boro leaf.', 5, 'leaf-2', 'sculpture/leaf-2'),
+    new imageSlides('Leaf on Rod', 'Flameworked boro leaf.', 3, 'leaf-rod', 'sculpture/leaf-rod'),  
+    new imageSlides('Elephant', 'Flameworked boro elephant.', 7, 'elephant', 'sculpture/elephant'),
+    new imageSlides('Dinosaur (1)', 'Flameworked boro dino.', 4, 'dino-1', 'sculpture/dino-1'),
+    new imageSlides('Dinosaur (2)', 'Flameworked boro dino.', 4, 'dino-2', 'sculpture/dino-2'),
+    new imageSlides('Dinosaur (3)', 'Flameworked boro dino.', 4, 'dino-3', 'sculpture/dino-3'),
+    new imageSlides('Dinosaur (4)', 'Flameworked boro dino.', 6, 'dino-4', 'sculpture/dino-4'),
+    new imageSlides('Snail (1)', 'Flameworked boro snail.', 8, 'snail-1', 'sculpture/snail-1'),
+    new imageSlides('Snail (2)', 'Flameworked boro snail.', 5, 'snail-2', 'sculpture/snail-2'),
+    new imageSlides('Snail (3)', 'Flameworked boro snail with hint of blue.', 6, 'snail-3', 'sculpture/snail-3'),
+    new imageSlides('Whale', 'Flameworked boro whale.', 5, 'whale', 'sculpture/whale')
   ];
   for (const sculp of sculpture) {
       htmlText +=  '<div class="column sculpture">' + sculp.createHTML() + '</div>';
@@ -99,7 +110,7 @@
     new imageSlides('Bubble (stretched 1)', 'Flameworked boro glass drop', 3, 'stretch-bubble', 'necklaces/stretch-bubble'),
     new imageSlides('Bubble (stretched 2)', 'Flameworked boro glass drop', 5,'stretched-bubbles', 'necklaces/stretched-bubbles'),
     new imageSlides('Yellow', 'Flameworked boro glass drop', 4,'yellow', 'necklaces/yellow'),
-    new imageSlides('Yellow Red Swirl', 'Flameworked boro glass drop', 5, 'yellow-red-swirl', 'necklaces/yellow-red-swirl'),
+    new imageSlides('Yellow Red Swirl', 'Flameworked boro glass drop', 5, 'yellow-red-swirl', 'necklaces/yellow-red-swirl')
   ];
   for (const n of necklaces) {
       htmlText +=  '<div class="column necklace">' + n.createHTML() + '</div>';
