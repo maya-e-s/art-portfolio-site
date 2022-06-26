@@ -1,4 +1,4 @@
 # Art Portfolio Site
-Collection of my art projects (glass, ceramics, etc).
+Collection of my art projects (glass, ceramics, metal, etc).
 
-Too see a preview of this site, click [here](https://htmlpreview.github.io/?https://github.com/maya-e-s/art-portfolio-site/blob/main/index.html).
+Too see a preview of this site, navigate to [https://maya-e-s.github.io/art-portfolio-site/index.html](https://maya-e-s.github.io/art-portfolio-site/index.html).
