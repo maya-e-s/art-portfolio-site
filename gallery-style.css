@@ -1,6 +1,6 @@
 * {  box-sizing: border-box;}
 
-/*CSS For Image Slideshow*/
+/*CSS For Image Slideshow---------------------------------------------------*/
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -38,7 +38,7 @@ img {vertical-align: middle;}
   color: black;
 }
 
-/*CSS For Image Gallery*/
+/*CSS For Image Gallery-------------------------------------------------------------------*/
 body {
   background-color: #f1f1f1;
   padding: 20px;
@@ -58,19 +58,31 @@ h1 {
 
 .row {
   margin: 10px -16px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
 /* Add padding BETWEEN each column */
 .row,
 .row > .column {
   padding: 8px;
-}
+} 
 
 /* Create three equal columns that floats next to each other */
 .column {
-  float: left;
-  width: 33.33%;
+  /*float: left;
+  width: 33.33%; */
+  flex: 33.33%; /*25%;*/
+  max-width: 33.33%; /*25%;*/
+  padding: 0 4px;
   display: none; /* Hide all elements by default */
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
 
 /* Clear floats after rows */ 
