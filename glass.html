@@ -67,24 +67,24 @@
   /* Add new images for each filter */ 
   //vessel
   const vessels = [
-    new imageSlides('Orange Vase', 'Hand blown vase layered with orange frit.', 6, 'orange-tall', 'vessels/orange-tall'),
-    new imageSlides('Blue Shotglass', 'Hand blown blue shotglass.', 6, 'blue-shotglass', 'vessels/blue-shotglass'),
-    new imageSlides('Small Blue Cup', 'Hand blown small blue cup.', 6, 'blue-small', 'vessels/blue-small'),
+    new imageSlides('Orange Vase', 'Hand blown vase layered with orange frit. <br><font color="red"> Unavailable </font>', 6, 'orange-tall', 'vessels/orange-tall'),
     new imageSlides('Brown and White Vase', 'Hand blown brown and white vase.', 6, 'brown', 'vessels/brown'),
     new imageSlides('Orange Bottom Cup with Hole', 'Hand blown cup with orange frit pattern and hole in bottom.', 7, 'orange-bottom', 'vessels/orange-bottom'),
     new imageSlides('Black', 'Hand blown black vase.', 3, 'black', 'vessels/black'),
     new imageSlides('Blue Vase (1)', 'Hand blown blue vase with pulled and textured neck.', 4, 'blue-fancy', 'vessels/blue-fancy'),
     new imageSlides('Blue Vase (2)', 'Hand blown blue vase with white frit.', 6, 'blue-pretzel', 'vessels/blue-pretzel'),
-    new imageSlides('Bubble on Wood', 'Hand blown clear bubble on wood.', 6, 'bubble-1', 'vessels/bubble-1'),
-    new imageSlides('Textured Bubble', 'Hand blown thick clear bubble with textured bottom.', 2, 'bubble-2', 'vessels/bubble-2'),
-    new imageSlides('Bubble on Rock (1)', 'Hand blown clear bubble on rock.', 5, 'bubble-3', 'vessels/bubble-3'),
-    new imageSlides('Bubble on Rock (2)', 'Hand blown clear bubble on rock.', 5, 'bubble-4', 'vessels/bubble-4'),
-    new imageSlides('Bubble on Rock (3)', 'Hand blown clear bubble on rock.', 5, 'bubble-5', 'vessels/bubble-5'),
+    new imageSlides('Blue Shotglass', 'Hand blown blue shotglass. <br><font color="red"> Unavailable </font>', 6, 'blue-shotglass', 'vessels/blue-shotglass'),
+    new imageSlides('Small Blue Cup', 'Hand blown small blue cup. <br><font color="red"> Unavailable </font>', 6, 'blue-small', 'vessels/blue-small'),
     new imageSlides('Crackled Green Cup with Hole', 'Hand blown and crackled green and white cup. Hole in bottom.', 5, 'crackled-green', 'vessels/crackled-green'),
     new imageSlides('Light Green Vase', 'Hand blown vase.', 4, 'glow-color', 'vessels/glow-color'),
     new imageSlides('Green Orb', 'Hand blown hollow green orb.', 5, 'green-ball', 'vessels/green-ball'),
     new imageSlides('Cup with Green Swirl', 'Hand blown cup with green swirl.', 5, 'green-swirl', 'vessels/green-swirl'),
-    new imageSlides('Orange Cup', 'Hand blown cup with thick walls and orange base.', 5, 'orange-thick', 'vessels/orange-thick')
+    new imageSlides('Orange Cup', 'Hand blown cup with thick walls and orange base.', 5, 'orange-thick', 'vessels/orange-thick'),
+    new imageSlides('Bubble on Wood', 'Hand blown clear bubble on wood.', 6, 'bubble-1', 'vessels/bubble-1'),
+    new imageSlides('Textured Bubble', 'Hand blown thick clear bubble with textured bottom.', 2, 'bubble-2', 'vessels/bubble-2'),
+    new imageSlides('Bubble on Rock (1)', 'Hand blown clear bubble on rock. <br><font color="red"> Unavailable </font>', 5, 'bubble-3', 'vessels/bubble-3'),
+    new imageSlides('Bubble on Rock (2)', 'Hand blown clear bubble on rock. <br><font color="red"> Unavailable </font>', 5, 'bubble-4', 'vessels/bubble-4'),
+    new imageSlides('Bubble on Rock (3)', 'Hand blown clear bubble on rock. <br><font color="red"> Unavailable </font>', 5, 'bubble-5', 'vessels/bubble-5')
   ];
   for (const ves of vessels) {
       htmlText +=  '<div class="column vessel">' + ves.createHTML() + '</div>';
@@ -94,12 +94,12 @@
   /* Add new images for each filter */ 
   //paperweights
   const paperweights = [
-    new imageSlides('Copper Encased Wire', 'Hand sculpted paperweight. Encased copper wire with heat patina.', 8, 'copperball', 'paperweights/copperball'),
+    new imageSlides('Copper Encased Wire', 'Hand sculpted paperweight. Encased copper wire with heat patina. <br><font color="red"> Unavailable </font>', 8, 'copperball', 'paperweights/copperball'),
     new imageSlides('Black Pineapple', 'Hand sculpted paperweight, black color with pineapple mold.', 6, 'black-pineapple', 'paperweights/black-pineapple'),
     new imageSlides('Bubble', 'Hand sculpted paperweight with bubble.', 4, 'bubble', 'paperweights/bubble'),
-    new imageSlides('Green with Bubble', 'Hand sculpted paperweight with green frit and bubble.', 6, 'bubble-green', 'paperweights/bubble-green'),
+    new imageSlides('Green with Bubble', 'Hand sculpted paperweight with green frit and bubble. <br><font color="red"> Unavailable </font>', 6, 'bubble-green', 'paperweights/bubble-green'),
     new imageSlides('Yellow with Bubble', 'Hand sculpted paperweight with yellow frit and bubble.', 4, 'bubble-yellow', 'paperweights/bubble-yellow'),
-    new imageSlides('Blue Green Wraps', 'Hand sculpted paperweight, green and blue wrapped bits.', 6, 'wrapped', 'paperweights/wrapped'),
+    new imageSlides('Blue Green Wraps', 'Hand sculpted paperweight, green and blue wrapped bits. <br><font color="red"> Unavailable </font>', 6, 'wrapped', 'paperweights/wrapped'),
     new imageSlides('Adventurine Green Mix', 'Hand sculpted paperweight, adventurine green, blue, and white mix.', 4, 'adventurine-mix', 'paperweights/adventurine-mix'), 
     new imageSlides('Baking Soda', 'Hand sculpted paperweight, baking soda to produce bubbles.', 3, 'baking-soda', 'paperweights/baking-soda'), 
     new imageSlides('Black', 'Hand sculpted paperweight, black.', 4, 'black', 'paperweights/black'),
@@ -108,7 +108,7 @@
     new imageSlides('Green Stringers', 'Hand sculpted paperweight with green and blue frit.', 5, 'green-stringers', 'paperweights/green-stringers'),
     new imageSlides('Studio Party Mix', 'Hand sculpted paperweight, studio party mix in mold.', 5, 'party-mold', 'paperweights/party-mold'),
     new imageSlides('Red Mold', 'Hand sculpted paperweight, red frit with mold.', 5, 'red-mold', 'paperweights/red-mold'),
-    new imageSlides('Red', 'Hand sculpted paperweight, red frit.', 5, 'strawberry', 'paperweights/strawberry')
+    new imageSlides('Red', 'Hand sculpted paperweight, red frit. <br><font color="red"> Unavailable </font>', 5, 'strawberry', 'paperweights/strawberry')
   ];
   for (const paperweight of paperweights) {
       htmlText +=  '<div class="column paperweights">' + paperweight.createHTML() + '</div>';
@@ -116,11 +116,12 @@
   }
 
   //sculpture
-  const scuplture = [new imageSlides('Blue Rectangle', 'Solid rectangle with blue coloring and stretched bubble.', 6, 'blue-rectangle', 'sculpture/blue-rectangle'), 
-    new imageSlides('Ladybug', 'Solid glass ladybug. Notice the two gathers of red frit seen through the bottom.', 12, 'ladybug', 'sculpture/ladybug'), 
-    new imageSlides('Orange Snail', 'Solid orange snail.', 9, 'orange-snail', 'sculpture/orange-snail'), 
-    new imageSlides('Snail', 'Solid clear snail.', 6, 'snail', 'sculpture/snail'), 
-    new imageSlides('Swan (1)', 'Solid swan. Bottom cracked so not cold worked.', 6, 'swan-1', 'sculpture/swan-1'), 
+  const scuplture = [
+    new imageSlides('Blue Rectangle', 'Solid rectangle with blue coloring and stretched bubble. <br><font color="red"> Unavailable </font>', 6, 'blue-rectangle', 'sculpture/blue-rectangle'), 
+    new imageSlides('Ladybug', 'Solid glass ladybug. Notice the two gathers of red frit seen through the bottom. <br><font color="red"> Claimed - Mom</font>', 12, 'ladybug', 'sculpture/ladybug'), 
+    new imageSlides('Orange Snail', 'Solid orange snail. <br><font color="red"> Claimed - Emma</font>', 9, 'orange-snail', 'sculpture/orange-snail'), 
+    new imageSlides('Snail', 'Solid clear snail. <br><font color="red"> Unavailable </font>', 6, 'snail', 'sculpture/snail'), 
+    new imageSlides('Swan (1)', 'Solid swan. Bottom cracked so not cold worked. <br><font color="red"> Claimed - Mom</font>', 6, 'swan-1', 'sculpture/swan-1'), 
     new imageSlides('Swan (2)', 'Solid swan.', 9, 'swan-2', 'sculpture/swan-2'),   
     new imageSlides('Copper Spiral', 'Spiraled copper wire encased in glass with heat patina.', 4, 'copper-spiral', 'sculpture/copper-spiral'), 
     new imageSlides('Copper Wire', 'Copper wire partially encased in glass. Can carry electricity (be used in a circuit).', 5, 'copper-wire', 'sculpture/copper-wire'), 
