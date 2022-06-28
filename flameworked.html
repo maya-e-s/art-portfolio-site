@@ -79,13 +79,14 @@
     new imageSlides('Leaf on Rod', 'Flameworked boro leaf. <br><font color="red"> Unavailable </font>', 2, 'leaf-rod', 'sculpture/leaf-rod'),  
     new imageSlides('Elephant', 'Flameworked boro elephant. <br><font color="red"> Unavailable </font>', 7, 'elephant', 'sculpture/elephant'),
     new imageSlides('Dinosaur (1)', 'Flameworked boro dino. <br><font color="red"> Unavailable </font>', 4, 'dino-1', 'sculpture/dino-1'),
-    new imageSlides('Dinosaur (2)', 'Flameworked boro dino.', 4, 'dino-2', 'sculpture/dino-2'),
+    new imageSlides('Dinosaur (2)', 'Flameworked boro dino. <br><font color="red"> Claimed - Maggie </font>', 4, 'dino-2', 'sculpture/dino-2'),
     new imageSlides('Dinosaur (3)', 'Flameworked boro dino. <br><font color="red"> Claimed - Max</font>', 4, 'dino-3', 'sculpture/dino-3'),
-    new imageSlides('Dinosaur (4)', 'Flameworked boro dino.', 6, 'dino-4', 'sculpture/dino-4'), // dad will take if unclaimed 
+    new imageSlides('Dinosaur (4)', 'Flameworked boro dino. <br><font color="red"> Claimed - Ximena </font>', 6, 'dino-4', 'sculpture/dino-4'), // dad will take if unclaimed 
     new imageSlides('Snail (1)', 'Flameworked boro snail.', 8, 'snail-1', 'sculpture/snail-1'),
     new imageSlides('Snail (2)', 'Flameworked boro snail. <br><font color="red"> Unavailable </font>', 5, 'snail-2', 'sculpture/snail-2'),
-    new imageSlides('Snail (3)', 'Flameworked boro snail with hint of blue.', 6, 'snail-3', 'sculpture/snail-3'),
-    new imageSlides('Whale', 'Flameworked boro whale.', 5, 'whale', 'sculpture/whale')
+    new imageSlides('Snail (3)', 'Flameworked boro snail with hint of blue. <br><font color="red"> Claimed - Liv </font>', 6, 'snail-3', 'sculpture/snail-3'),
+    new imageSlides('Whale (1)', 'Flameworked boro whale.', 2, 'whale-1', 'sculpture/whale-1'),
+    new imageSlides('Whale (2)', 'Flameworked boro whale.', 3, 'whale-2', 'sculpture/whale-2')
   ];
   for (const sculp of sculpture) {
       htmlText +=  '<div class="column sculpture">' + sculp.createHTML() + '</div>';
@@ -93,9 +94,9 @@
   }
 
   //necklace
-  const necklaces = [new imageSlides('Blue (1)', 'Flameworked boro glass drop', 4, 'blue1', 'necklaces/blue1'), 
-    new imageSlides('Blue (2)', 'Flameworked boro glass drop', 4, 'blue2', 'necklaces/blue2'),
-    new imageSlides('Blue (3)', 'Flameworked boro glass drop', 7, 'blue3', 'necklaces/blue3'),
+  const necklaces = [new imageSlides('Blue (1)', 'Flameworked boro glass drop. <br><font color="red"> Claimed - Sam </font>', 4, 'blue1', 'necklaces/blue1'), 
+    new imageSlides('Blue (2)', 'Flameworked boro glass drop. <br><font color="red"> Claimed - Annie </font>', 4, 'blue2', 'necklaces/blue2'),
+    new imageSlides('Blue (3)', 'Flameworked boro glass drop. <br><font color="red"> Claimed - Hannah </font>', 7, 'blue3', 'necklaces/blue3'),
     new imageSlides('Blue (4)', 'Flameworked boro glass drop. <br><font color="red"> Claimed - Emma </font>', 5, 'blue4', 'necklaces/blue4'),
     new imageSlides('Blue (5)', 'Flameworked boro glass drop', 6, 'blue5', 'necklaces/blue5'),
     new imageSlides('Blue (6)', 'Flameworked boro glass drop. <br><font color="red"> Claimed - Mom </font>', 5, 'blue6', 'necklaces/blue6'),
@@ -117,7 +118,7 @@
     new imageSlides('Rectangle (mulitcolor)', 'Flameworked boro glass rectangle <br><font color="red"> Unavailable </font>', 12, 'rect-multicolor', 'necklaces/rect-multicolor'),
     new imageSlides('Ring with Blue Spikes', 'Flameworked boro glass', 5, 'ring-blue-spikes', 'necklaces/ring-blue-spikes'),
     new imageSlides('Ring with Long Spikes', 'Flameworked boro glass', 2, 'ring-long-spikes', 'necklaces/ring-long-spikes'),
-    new imageSlides('Ring with Red Spikes', 'Flameworked boro glass', 5,'ring-red-spikes', 'necklaces/ring-red-spikes'),
+    new imageSlides('Ring with Red Spikes', 'Flameworked boro glass. <br><font color="red"> Claimed - Aunt Linda </font>', 5,'ring-red-spikes', 'necklaces/ring-red-spikes'),
     new imageSlides('Ring with Short Spikes', 'Flameworked boro glass', 2, 'ring-short-spikes', 'necklaces/ring-short-spikes')
     ];
   for (const n of necklaces) {
